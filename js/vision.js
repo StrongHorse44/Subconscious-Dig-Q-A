@@ -125,7 +125,7 @@ export async function measureHand(img) {
   };
 }
 
-// ---------- posture (clothed, full or half body) ----------
+// ---------- posture (full or half body) ----------
 export async function measurePose(img) {
   const task = await getTask('pose');
   const r = task.detect(img);

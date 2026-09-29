@@ -10,7 +10,7 @@ const SLOTS = [
   { key: 'face', label: 'Your face, now', hint: 'A clear selfie, face toward the camera. Expression is data — don\'t pose, just be.', required: true },
   { key: 'hand', label: 'Your palm', hint: 'Dominant hand, palm to the camera, fingers relaxed and visible.' },
   { key: 'foot', label: 'The sole of your foot', hint: 'For foot reading — toes clearly visible.' },
-  { key: 'pose', label: 'Posture (clothed)', hint: 'Standing naturally, head to at least the hips. Have someone else take it if you can.' },
+  { key: 'pose', label: 'Posture', hint: 'Standing naturally, head to at least the hips. Have someone else take it if you can.' },
   { key: 'then', label: 'An older photo of your face', hint: 'Adds a Then vs. Now read — from a year or more ago.' }
 ];
 
@@ -56,7 +56,6 @@ function renderPhotos() {
             <input type="file" accept="image/*" aria-label="${s.label}">
           </label>`).join('')}
       </div>
-      <p class="note">Keep your clothes on — face, hands, feet and a clothed posture shot are all the reading uses.</p>
       <div class="actions">
         <button class="btn" id="read" ${state.files.face ? '' : 'disabled'}>Read me</button>
         <button class="link" id="back">Back</button>
